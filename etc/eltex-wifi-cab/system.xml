@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+    <entry key="mongoaddress">mongodb://<ip_server1>:27017,<ip_server2>:27017/wifi-customer-cab?replicaSet=softwlc</entry>
+    <entry key="nbiaddress">http://localhost:8080/axis2/services/RadiusNbiService?wsdl</entry>
+    <entry key="nbi.serviceLogin.user">softwlc_service</entry>
+    <entry key="nbi.serviceLogin.password"><ANSWER_SOFTWLC_SERVICE_USER_PASSWORD></entry>
+    <entry key="nbi.serviceLogin.requestTimeout.sec">120</entry>
+
+    <!--Bonnie or NBI-->
+    <entry key="data.service.type">NBI</entry>
+    <entry key="bonnie.service.host"><virtual_ip></entry>
+    <entry key="bonnie.service.port">9070</entry>
+
+    <!--Bruce-->
+    <entry key="bruce.service.host"><virtual_ip></entry>
+    <entry key="bruce.service.port">8008</entry>
+
+    <!--Jobs-->
+    <entry key="jobs.service.host"><virtual_ip></entry>
+    <entry key="jobs.service.port">9696</entry>
+
+    <!-- Support link  -->
+    <entry key="support.page.enabled">false</entry>
+    <entry key="support.page.url">http://eltex-co.ru</entry>
+
+    <!-- DPI link  -->
+    <entry key="dpi.page.enabled">false</entry>
+    <entry key="dpi.page.url">https://filter.wifi.rt.ru/</entry>
+
+    <!-- SSO Settings -->
+    <entry key="sso.enabled">false</entry>
+    <entry key="sso.redirectUri">http://<virtual_ip>:8080/wifi-cab/sso</entry>
+    <entry key="sso.clientSecret"></entry>
+    <entry key="sso.clientId"></entry>
+
+    <!-- SSO Auth -->
+    <entry key="sso.auth.server.protocol">http</entry>
+    <entry key="sso.auth.server.address"></entry>
+    <entry key="sso.auth.server.port">80</entry>
+
+    <entry key="sso.auth.auth.path">/auth/realms/b2b/protocol/openid-connect/auth</entry>
+    <entry key="sso.auth.logout.path">/auth/realms/b2b/protocol/openid-connect/logout</entry>
+
+    <!-- SSO REST -->
+    <entry key="sso.rest.server.protocol">http</entry>
+    <entry key="sso.rest.server.address"></entry>
+    <entry key="sso.rest.server.port">80</entry>
+    <entry key="sso.rest.server.timeout.sec">10</entry>
+    <entry key="sso.rest.protocol.version">2.0</entry>
+    <entry key="sso.rest.username"></entry>
+    <entry key="sso.rest.password"></entry>
+
+    <entry key="sso.rest.getToken.path">/apiman-gateway/b2b_test/getToken</entry>
+    <entry key="sso.rest.getUserInfo.path">/apiman-gateway/b2b_test/getUserInfo</entry>
+    <entry key="sso.rest.addUser.path">/apiman-gateway/b2b_test/addUser</entry>
+    <entry key="sso.rest.updateUser.path">/apiman-gateway/b2b_test/updateUser</entry>
+    <entry key="sso.rest.delUser.path">/apiman-gateway/b2b_test/delUser</entry>
+    <entry key="sso.rest.addUserParam.path">/apiman-gateway/b2b_test/addUserParam</entry>
+    <entry key="sso.rest.delUserParam.path">/apiman-gateway/b2b_test/delUserParam</entry>
+    <entry key="sso.rest.getUserByName.path">/apiman-gateway/b2b_test/getUserByName</entry>
+    <entry key="sso.rest.resetPassword.path">/apiman-gateway/b2b_test/resetPassword</entry>
+    <entry key="sso.rest.getUserByParam.path">/apiman-gateway/b2b_test/getUserByParam</entry>
+    <entry key="sso.rest.getUserByEmail.path">/apiman-gateway/b2b_test/getUserByEmail</entry>
+
+</properties>

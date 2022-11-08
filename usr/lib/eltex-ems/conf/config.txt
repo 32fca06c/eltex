@@ -1,0 +1,105 @@
+# DB Event
+poolName1=event
+event.jdbc.driver=org.gjt.mm.mysql.Driver
+event.jdbc.dbUrl=jdbc:mysql://localhost/eltex_alert?useUnicode=true&characterEncoding=utf8&relaxAutoCommit=true&connectTimeout=5000&useSSL=false
+event.jdbc.username=javauser
+event.jdbc.password=javapassword
+event.jdbc.maxPoolSize=32
+event.jdbc.inUse=yes
+# remote db host access with su privileges
+# event.ssh.login=
+# event.ssh.password=
+# event.ssh.port=
+
+# DB Tree
+poolName2=tree
+tree.jdbc.driver=org.gjt.mm.mysql.Driver
+tree.jdbc.dbUrl=jdbc:mysql://localhost/eltex_ems?useUnicode=true&characterEncoding=utf8&relaxAutoCommit=true&connectTimeout=5000&noAccessToProcedureBodies=true&useSSL=false
+tree.jdbc.username=javauser
+tree.jdbc.password=javapassword
+tree.jdbc.maxPoolSize=20
+tree.jdbc.inUse=yes
+
+# DB Ont
+poolName3=ont
+ont.jdbc.driver=org.gjt.mm.mysql.Driver
+ont.jdbc.dbUrl=jdbc:mysql://localhost/eltex_ont?useUnicode=true&characterEncoding=utf8&relaxAutoCommit=true&connectTimeout=5000&useSSL=false
+ont.jdbc.username=javauser
+ont.jdbc.password=javapassword
+ont.jdbc.maxPoolSize=40
+ont.jdbc.inUse=yes
+
+# DB Syslog
+poolName4=syslog
+syslog.jdbc.driver=org.gjt.mm.mysql.Driver
+syslog.jdbc.dbUrl=jdbc:mysql://localhost/Syslog?useUnicode=true&characterEncoding=utf8&relaxAutoCommit=true&connectTimeout=5000&useSSL=false
+syslog.jdbc.username=javauser
+syslog.jdbc.password=javapassword
+syslog.jdbc.maxPoolSize=4
+syslog.jdbc.inUse=yes
+# remote db host access with su privileges
+# syslog.ssh.login=
+# syslog.ssh.password=
+# syslog.ssh.port=
+
+# DB acsmain (alias=cpe)
+poolName5=cpe
+cpe.jdbc.driver=org.gjt.mm.mysql.Driver
+cpe.jdbc.dbUrl=jdbc:mysql://localhost/acsmain?useUnicode=true&characterEncoding=utf8&relaxAutoCommit=true&connectTimeout=5000&useSSL=false
+cpe.jdbc.username=javauser
+cpe.jdbc.password=javapassword
+cpe.jdbc.maxPoolSize=2
+cpe.jdbc.inUse=yes
+
+# DB  acscmds(alias=cmds)
+poolName6=cmds
+cmds.jdbc.driver=org.gjt.mm.mysql.Driver
+cmds.jdbc.dbUrl=jdbc:mysql://localhost/acscmds?useUnicode=true&characterEncoding=utf8&relaxAutoCommit=true&connectTimeout=5000&useSSL=false
+cmds.jdbc.username=javauser
+cmds.jdbc.password=javapassword
+cmds.jdbc.maxPoolSize=2
+cmds.jdbc.inUse=yes
+
+# DB  acsinf(alias=inf)
+poolName7=inf
+inf.jdbc.driver=org.gjt.mm.mysql.Driver
+inf.jdbc.dbUrl=jdbc:mysql://localhost/acsinf?useUnicode=true&characterEncoding=utf8&relaxAutoCommit=true&connectTimeout=5000&useSSL=false
+inf.jdbc.username=javauser
+inf.jdbc.password=javapassword
+inf.jdbc.maxPoolSize=2
+inf.jdbc.inUse=yes
+
+# DB  acscache(alias=cache)
+poolName8=cache
+cache.jdbc.driver=org.gjt.mm.mysql.Driver
+cache.jdbc.dbUrl=jdbc:mysql://localhost/acscache?useUnicode=true&characterEncoding=utf8&relaxAutoCommit=true&connectTimeout=5000&useSSL=false
+cache.jdbc.username=javauser
+cache.jdbc.password=javapassword
+cache.jdbc.maxPoolSize=2
+cache.jdbc.inUse=yes
+
+# DB  radius(alias=radius)
+poolName9=radius
+radius.jdbc.driver=org.gjt.mm.mysql.Driver
+radius.jdbc.dbUrl=jdbc:mysql://localhost/radius?useUnicode=true&characterEncoding=utf8&relaxAutoCommit=true&connectTimeout=5000&useSSL=false
+radius.jdbc.username=javauser
+radius.jdbc.password=javapassword
+radius.jdbc.maxPoolSize=40
+radius.jdbc.inUse=yes
+# remote db host access with su privileges
+# radius.ssh.login=
+# radius.ssh.password=
+# radius.ssh.port=
+
+# ------------------------------------------- SSID ---------------------------------------------
+# DB  wireless (alias=wireless)
+poolName10=wireless
+wireless.jdbc.driver=org.gjt.mm.mysql.Driver
+wireless.jdbc.dbUrl=jdbc:mysql://localhost/wireless?useUnicode=true&characterEncoding=utf8&relaxAutoCommit=true&connectTimeout=5000&useSSL=false
+wireless.jdbc.username=javauser
+wireless.jdbc.password=javapassword
+wireless.jdbc.maxPoolSize=30
+wireless.jdbc.inUse=yes
+
+# memcached server address
+#memcached_server_ip_port=127.0.0.1:11211

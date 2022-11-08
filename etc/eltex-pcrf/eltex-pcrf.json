@@ -1,0 +1,152 @@
+{
+  "auth.address" : "0.0.0.0",
+  "auth.port" : 31812,
+  "auth.mac.open.timeout.s" : 3600,
+  "auth.mac.welcome.service" : "WELCOME",
+
+  "acct.address" : "0.0.0.0",
+  "acct.ports" : [1813, 31813],
+
+  "lease.saver.address" : "0.0.0.0",
+  "lease.saver.port" : 4381,
+
+  "aaa.instances" : 5,
+  "aaa.host" : "127.0.0.1",
+  "aaa.secret" : "testing123",
+  "aaa.auth.port" : 1812,
+  "aaa.acct.port" : 1813,
+  "aaa.rest.port" : 7080,
+  "aaa.timeout" : 10,
+  "aaa.attempts" : 1,
+
+  "web.monitoring.port" : 7070,
+
+  "cluster.enable" : true,
+  "cluster.eventBusPort" : 5801,
+
+  "radius" : {
+    "url": "jdbc:mysql://localhost/radius?useUnicode=true&characterEncoding=utf8&connectTimeout=5000&socketTimeout=5000&autoReconnect=true&useSSL=false",
+    "user": "javauser",
+    "password": "javapassword",
+    "max_pool_size": 16
+  },
+
+  "mongo.pcrf" : {
+    "connection_string": "mongodb://<ip_server1>:27017,<ip_server2>:27017/pcrf?replicaSet=softwlc&waitQueueMultiple=500&connectTimeoutMS=10000&socketTimeoutMS=0",
+    "db_name": "pcrf"
+  },
+
+  "mongo.ott" : {
+    "connection_string": "mongodb://<ip_server1>:27017,<ip_server2>:27017/ott?replicaSet=softwlc&waitQueueMultiple=500&connectTimeoutMS=10000&socketTimeoutMS=0",
+    "db_name": "ott"
+  },
+
+  "session.storage" : {
+    "session.check.period.s" : 300,
+    "unauth.store.time.s" : 600,
+    "interval.number.expired" : 3,
+    "min.interval.s" : 45,
+    "default.interval.s" : 600
+  },
+
+  "bras.coa" : {
+    "coa.timeout" : 10,
+    "coa.attempts" : 1,
+    "coa.secret" : "testing123",
+    "remote.coa.port" : 3799,
+    "log.clean.period.s" : 604800,
+    "log.store.period" : {
+      "period" : 14,
+      "unit" : "D"
+    },
+    "worker.pool.size": 20
+  },
+
+  "sql.ems" : {
+    "url": "jdbc:mysql://localhost/eltex_ems?useUnicode=true&characterEncoding=utf8&connectTimeout=5000&socketTimeout=5000&autoReconnect=true&useSSL=false",
+    "user": "javauser",
+    "password": "javapassword",
+    "max_pool_size": 16
+  },
+
+  "sql.wireless" : {
+    "url": "jdbc:mysql://localhost/wireless?useUnicode=true&characterEncoding=utf8&connectTimeout=5000&socketTimeout=5000&autoReconnect=true&useSSL=false",
+    "user": "javauser",
+    "password": "javapassword",
+    "max_pool_size": 16
+  },
+
+  "sql.auth.service" : {
+    "url": "jdbc:mysql://localhost/eltex_auth_service?zeroDateTimeBehavior=convertToNull&useUnicode=true&characterEncoding=utf8&connectTimeout=5000&socketTimeout=5000&useSSL=false",
+    "user": "javauser",
+    "password": "javapassword",
+    "max_pool_size": 4
+  },
+
+  "language" : "en",
+
+  "radius.nbi" : {
+    "wdsl.url" : "http://<virtual_ip>:8080/axis2/services/RadiusNbiService?wsdl",
+    "username" : "softwlc_service",
+    "password" : "softwlc",
+    "connection.timeout.ms" : 30000,
+    "request.timeout.ms" : 120000
+  },
+
+  "tariffs.update.interval" : {
+    "interval" : 1,
+    "unit" : "hours",
+    "apb_enabled": false,
+    "apb_host": "<virtual_ip>",
+    "apb_port": 8090
+  },
+
+  "bras.cron.update.interval": {
+    "interval" : 1,
+    "unit": "hours"
+  },
+
+  "filters.cache.dir" : "/var/lib/eltex-pcrf/filters/",
+
+  "clickhouse": {
+    "url": "jdbc:clickhouse://<virtual_ip>:8123/radius",
+    "user_name": "javauser",
+    "user_password": "javapassword",
+    "actualization_period_ms": 15000
+  },
+
+  "accounting.options": {
+    "use_clickhouse": false,
+    "use_mysql": true,
+    "batch_interval_ms": 300000,
+    "max_queue_load": 100
+  },
+
+  "generic.ap.registrar": {
+    "max_aps_in_queue": 30,
+    "ap_register_interval_ms": 600000,
+    "added_ap_cache_ttl_ms": 600000,
+    "host": "<virtual_ip>",
+    "port": 8080,
+    "worker_pool_size": 8
+  },
+
+  "kafka": {
+    "mcd.enabled": false,
+    "circuit.breaker": {
+      "timeout.ms": 30000,
+      "reset.ms": 60000,
+      "max.failures": 3
+    },
+    "producer": {
+      "bootstrap.servers": "<virtual_ip>:9092",
+      "linger.ms": "1000",
+      "topic": "mcd",
+      "max.block.ms": "30000",
+      "request.timeout.ms": "14000",
+      "delivery.timeout.ms": "30000",
+      "acks": "1",
+      "retries": "1"
+    }
+  }
+}
